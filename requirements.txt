@@ -2,3 +2,9 @@ flask
 flask_cors
 pyngrok
 python-dotenv
+openai
+tiktoken
+autogen-agentchat
+autogen-core
+autogen-ext
+autogen-ext[mcp]
