@@ -5,7 +5,7 @@ from pyngrok import ngrok
 from dotenv import load_dotenv
 load_dotenv()
 
-NGROQ_AUTH_TOKEN = os.getenv("NGROQ_AUTH_TOKEN")
+NGROK_AUTH_TOKEN = os.getenv("NGROK_AUTH_TOKEN")
 
 
 app = Flask(__name__)
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     port = 7001
     os.environ['FLASK_ENV'] = 'development'
 
-    ngrok.set_auth_token(NGROQ_AUTH_TOKEN)
+    ngrok.set_auth_token(NGROK_AUTH_TOKEN)
     public_url = ngrok.connect(port)
     print(f"Public URL: {public_url}/api/hello \n \n")
 
