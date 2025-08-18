@@ -54,12 +54,8 @@ async def setup_team():
 
 async def run_task(task:str) -> str:
     team = await setup_team()
-    output = []
-
-    async for msg in team.run_stream(task=task):
-        output.append(str(msg))
-
-    return "\n\n\n".join(output)
+    result = await team.run(task=task)
+    return result
 
 #################################################
 
@@ -83,7 +79,7 @@ def run():
         print(f"Got the task, {task}")
 
         result = asyncio.run(run_task(task))
-        return jsonify({"status":"success", "result":result}), 200
+        return jsonify({"status":"success", "result":result.messages[-1].content}), 200
     
     except Exception as e:
         return jsonify({"status":"error", "result": str(e)}), 500
