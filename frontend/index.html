@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot UI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>🤖 AI Chatbot</h1>
+    </header>
+
+    <main class="chat-box" id="chatBox">
+      <div class="message bot">Hello! How can I help you today?</div>
+    </main>
+
+    <!-- Loading Spinner -->
+    <div class="spinner-container" id="spinner" style="display: none;">
+      <div class="spinner"></div>
+    </div>
+
+    <footer class="chat-footer">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button id="sendBtn" onclick="sendMessage()">Send</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
