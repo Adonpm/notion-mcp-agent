@@ -2,6 +2,10 @@
 
 A powerful Flask-based web application that integrates with Notion workspaces using the Model Context Protocol (MCP) and OpenAI's GPT-4o model. This application provides seamless access to Notion content through a conversational AI interface with automatic public URL generation via ngrok.
 
+## 🎬 Demo
+
+![Notion AI Assistant Demo](demo/notion-mcp.gif)
+
 ## 🚀 Features
 
 - **Notion Integration**: Direct connection to Notion workspaces using MCP (Model Context Protocol)
